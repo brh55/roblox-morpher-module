@@ -8,18 +8,18 @@ function Morpher.select(player, parent)
 	local newCharacter = morphModel:Clone()
 	
 	newCharacter.HumanoidRootPart.Anchored = false
-  -- Sets location to current location --
+ 	 -- Sets location to current location --
 	newCharacter:SetPrimaryPartCFrame(oldCharacter.PrimaryPart.CFrame)
-  newCharacter.Parent = workspace
+  	newCharacter.Parent = workspace
   
-  -- Optional, but we add this attribute to be used elsewhere --
+  	-- Optional, but we add this attribute to be used elsewhere --
 	player:SetAttribute("hasMorphed", true);
 	player.Character = newCharacter
 end
 
 -- morpher.initiate --
 -- This will bind the selection method to a proximity prompt --
-function Morpher.initiate(parent)
+function Morpher.bindPrompt(parent)
 	local prompt = parent.Prompt.ProximityPrompt
 	prompt.Triggered:Connect(function(player)
 		Morpher.select(player, parent)
