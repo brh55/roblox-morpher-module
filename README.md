@@ -1,5 +1,5 @@
 # roblox-morpher-module
-A simple modulescript that let's you morph the player to any existing model / object.
+A simple roblox *modulescript* that let's you morph the player to any existing model / object.
 
 ### Demo
 <img src="https://media2.giphy.com/media/WVkBAKQFeoqZZoJsWt/giphy.gif">
